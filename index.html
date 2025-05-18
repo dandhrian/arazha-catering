@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arazha Catering</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fdf1dc;
+      margin: 0;
+      color: #3e2f1c;
+    }
+
+    header {
+      background: #d95d1a;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      padding: 30px;
+      flex-wrap: wrap;
+    }
+    .hero img {
+      width: 200px;
+      height: auto;
+      max-height: 200px;
+      object-fit: cover;
+      margin-right: 30px;
+      border-radius: 10px;
+    }
+    .hero-content {
+      max-width: 500px;
+    }
+    .hero-content h2 {
+      font-size: 32px;
+      margin: 0 0 10px;
+    }
+    .hero-content p {
+      margin: 0 0 20px;
+    }
+    .hero-content button {
+      background: #3e2f1c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    h3 {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 24px;
+      color: #3e2f1c;
+    }
+
+    .menu-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* Jika menu-section cuma 1 item (seperti Chicken Whole), batasi max-width */
+    .menu-section:has(.menu-item:nth-child(2)) {
+      max-width: 100%;
+    }
+    .menu-section:not(:has(.menu-item:nth-child(2))) {
+      max-width: 240px; /* supaya gambarnya gak terlalu besar */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .menu-item {
+      background: #ffe8c7;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Semua gambar menu ukurannya sama seperti Ayam Bakar */
+    .menu-item img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .menu-item p {
+      margin: 10px 0 0;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>ARAZHA CATERING</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Menu</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="warung makan.jpg" alt="Warung Makan">
+  <div class="hero-content">
+    <h2>Arazha Catering</h2>
+    <p>Aneka makanan lezat untuk anak-anak hingga dewasa</p>
+    <button>Lihat Menu</button>
+  </div>
+</section>
+
+<h3>Menu Utama</h3>
+<div class="menu-section">
+  <div class="menu-item"><img src="ayam bakar.jpg" alt=""><p>Ayam Bakar + Nasi<br>Rp. 13.000</p></div>
+  <div class="menu-item"><img src="ayam penyet.jpg" alt=""><p>Ayam Penyet + Nasi<br>Rp. 13.000</p></div>
+  <div class="menu-item"><img src="chicken steak.jpg" alt=""><p>Chicken Steak + Nasi<br>Rp. 15.000</p></div>
+  <div class="menu-item"><img src="mpek-mpek.jpg" alt=""><p>Mpek-Mpek<br>Rp. 13.000</p></div>
+  <div class="menu-item"><img src="seblak.jpg" alt=""><p>Seblak<br>Rp. 10.000</p></div>
+  <div class="menu-item"><img src="mie nyemek.jpg" alt=""><p>Mie Nyemek<br>Rp. 10.000</p></div>
+</div>
+
+<h3>Menu Snack</h3>
+<div class="menu-section">
+  <div class="menu-item"><img src="sosis bakar.jpg" alt=""><p>Sosis Bakar / Bakso Bakar<br>Rp. 2.000</p></div>
+  <div class="menu-item"><img src="sempol.jpg" alt=""><p>Sempol<br>Rp. 5.000</p></div>
+  <div class="menu-item"><img src="roti bakar.jpg" alt=""><p>Roti Bakar<br>Rp. 7.000</p></div>
+  <div class="menu-item"><img src="cireng ayam suir pedas.jpg" alt=""><p>Cireng Ayam Suir Pedas<br>Rp. 3.000</p></div>
+  <div class="menu-item"><img src="cireng ayam suir.jpg" alt=""><p>Cireng Ayam Suir<br>Rp. 3.000</p></div>
+  <div class="menu-item"><img src="mendoan.jpg" alt=""><p>Mendoan<br>Rp. 5.000</p></div>
+  <div class="menu-item"><img src="corndog besar.jpg" alt=""><p>Corndog Besar<br>Rp. 10.000</p></div>
+  <div class="menu-item"><img src="corndog sedang.jpg" alt=""><p>Corndog Sedang<br>Rp. 7.000</p></div>
+  <div class="menu-item"><img src="corndog kecil.jpg" alt=""><p>Corndog Kecil<br>Rp. 3.000</p></div>
+</div>
+
+<h3>Menu Minuman</h3>
+<div class="menu-section">
+  <div class="menu-item"><img src="es teh reguler.jpg" alt=""><p>Es Teh Reguler<br>Rp. 3.000</p></div>
+  <div class="menu-item"><img src="es teh jumbo.jpg" alt=""><p>Es Teh Jumbo<br>Rp. 5.000</p></div>
+  <div class="menu-item"><img src="air mineral.jpg" alt=""><p>Air Mineral<br>Rp. 4.000</p></div>
+  <div class="menu-item"><img src="aneka kopi.jpg" alt=""><p>Aneka Kopi<br>Rp. 4.000</p></div>
+</div>
+
+<h3>Paket Bundling Rp. 10.000-an</h3>
+<div class="menu-section">
+  <div class="menu-item"><img src="seblak + es teh.jpg" alt=""><p>Seblak + Es Teh<br>Rp. 10.000</p></div>
+  <div class="menu-item"><img src="corndog + es teh.jpg" alt=""><p>Corndog + Es Teh<br>Rp. 10.000</p></div>
+  <div class="menu-item"><img src="mie nyemek + es teh.jpg" alt=""><p>Mie Nyemek + Es Teh<br>Rp. 10.000</p></div>
+</div>
+
+<h3>Chicken Whole</h3>
+<div class="menu-section">
+  <div class="menu-item"><img src="whole chicken.jpg" alt=""><p>Ayam 1 Ekor + Saus Keju, 4 Nasi & 4 Es Teh<br>Rp. 85.000</p></div>
+</div>
+
+</body>
+</html>
